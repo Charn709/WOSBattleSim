@@ -1,0 +1,629 @@
+TODO:
+- Try more with engagement
+- Alternate rounds by troop types?
+fml idk anymore
+
+
+
+
+
+
+
+### These are the final formulas/theories. Not all math is explained on this page.
+Guide/math explanation for wosnerds discord
+
+------------- "Damage" Calculation
+Calculate Effective Troop Stats with Diminishing Returns
+Effective Attack (EA)
+Effective Defense (ED)
+Effective Lethality (EL)
+Effective Health (EH)
+Calculate Base Damage
+Adjusted for special bonuses and skill multipliers.
+Calculate Total Damage Before Damage Reduction
+Incorporate Effective Lethality and troop count.
+Apply Defender's Damage Reduction
+Calculate Number of Kills
+Update Troop Counts and Record Losses
+Process Skills and Effects
+Skill activations and their impacts.
+Apply Damage Over Time (DoT) Effects
+
+
+
+--- Damage Calculation Steps - Step 1
+
+Base Stats/Effective Stats
+... need to be calculated for all three troop types as the EA/ED/EL/EH for infantry will not be the same as for marksman. 
+All this is is taking the base troop stat (i.e., for T10 Infantry - Attack: 10; Defense: 13; Lethality: 10; Health: 15) and applying the players bonus stats.
+
+
+ALL TROOPS/STATS: 
+Effective Stat = Base Stat × (1 + Stat Bonus / (Stat Bonus + 100)
+
+-Example:
+
+SBZ Dave
+
+Effective Attack:
+EA = Base Attack × (1 + Attack Bonus / (Attack Bonus + 100))
+= 10 x (1 + 903.4 / (903.4 + 100))
+= 19
+
+EA = 10 x (1 + 903.4/100)
+EA = 10 x (1 + 9.03)
+EA = 10 x (10.03)
+EA = 100.34
+
+Dave's Infantry have an "effective" attack of 19 compared to the base of 10.
+
+Do this for the rest of the stats...
+
+Effective Defense
+ED = 13 x (1+690.5/100)
+690.5/100 = 6.905
+ED = 13 x (1 + 6.905)
+ED = 13 x 7.905
+ED = 102.76
+
+Dave's Infantry have an "effective" defense of 24.36 compared to the base of 13.
+
+Effective Lethality - 1065.1
+EL = 10 x (1+1065.1/100)
+EL = 10 x (1 + 10.65)
+EL = 10 x 11.65
+EL = 116.5
+
+
+Effective Health - 1281.8
+EH = 15 × (1 + 1281.8/100)
+EH = 15 x (1 + 12.81)
+EH = 15 x 13.81
+EH = 207.15
+
+
+To make it more simple... every 100% in bonus = +1 base stat
+Attack with 300% (you get this in your battle report) will be +3. So your base attack is 13 vs the normal damage of 10.
+
+
+
+------------------ Part 2 --- Base Damage; tying it together
+
+Base Damage = (EA - (ED × 0.5)) × Special Bonus × Expedition Skill Multiplier × Troop Skill Multiplier × Additional Damage Multiplier
+
+ED x 0.5 is more or less just a "theory" to try and match actual battle mechanics--
+this prevents the defenders defense from overpowering the offense. I'm still playing around with these numbers.
+
+So... (EA - (ED x 0.5)) is essentially the attackers capability after subtracting the defensive capability.
+
+(EXAMPLE LATER ON)
+------------------ Part 3 --- SB, ESM
+
+SB = Special bonuses - certain advantages one troop type holds over the other
+- i.e., Infantry dealing extra 10% damage to Lancers ---> this is something we already know. One of the few things that the game actually tells us.
+SB for Infantry over Lancer would be an SB of 1.10
+
+When doing the calculations, Infantry vs Infantry would be an SB of 1.00
+
+ESM - Expedition Skill Multipliers
+- From skills like "Positional Battler" - 25% damage (static skills only, not probabilistic)
+Positional Battler = 1 + 25 / 100 = 1.25
+
+--------------- Part 4 --- TSM, ADM - Only add these to figure out your damage + RNG damage
+
+
+
+ADM = Additional Damage Multiplier
+i.e., skills like Volley
+
+
+CONTINUE LATER
+
+
+
+
+
+
+
+--- Effective Stats
+ (i.e., the "final" troop stat with bonus applied)
+Effective Stat = Base Stat x (1 + (Stat Bonus) / (Stat Bonus + 100))
+
+Attack (EA) -
+EA = Base Attack x (1 + Attack Bonus / (Attack Bonus + 100))
+
+Defense (ED) -
+ED = Base Defense x (1 + Defense Bonus / (Defense Bonus + 100))
+
+Lethality - 
+EL = Base Lethality x (1 + Lethality Bonus / (Lethality Bonus + 100))
+
+Health (EH) - 
+EH = Base Health x (1 + Health Bonus Total / (Health Bonus Total + 100))
+
+Let's take Dave's stats/skills for defense & Brabos stats for offense. Widget bonuses have already been added to the stats.
+(This is a real battle report)
+
+Dave Troops - Total: 699,807
+
+Dave's Stat Bonuses:
+
+- Infantry Total Troops = 331,624
+Infantry Attack: +904.6%
+Infantry Defense: +690.5%
+Infantry Lethality: +1065.1%
+Infantry Health: +1181.8%
+
+- Lancer Total Troops = 317,817
+Lancer Attack: +830.8%
+Lancer Defense: +643.9%
+Lancer Lethality: +849.6%
+Lancer Health: +943.1%
+
+- Marksman Total Troops = 50,366
+Marksman Attack: +826.5%
+Marksman Defense: +638.5%
+Marksman Lethality: +847.8%
+Marksman Health: +956.6%
+
+Expedition Skills:
+
+- Flint:
+"Pyromaniac" - All troops attack have a 20% chance of setting the target on fire, dealing 40% damage per turn for 3 turns
+"Burning Resolve" - Attack increased by 25% for all troops
+"Immolation" - All troops attack have a 50% chance of increasing enemy troops damage taken by 50%
+***WIDGET ALREADY ADDED TO STAT BONUSES***
+
+- Philly:
+"Vigor Tactics" - All troops have 15% increased attack and 10% increase in Defense
+"Dosage Boost" - All troops attack have a 25% chance of dealing 200% damage
+"Numbing Spores" - All troops attack have a 20% chance of stunning a target for 1 turn
+
+- Zinman:
+"Implacable" - All troops health & defense incrased by 10%
+"Positional Battler" - Damage dealt increased by 25% for all troops
+
+***WIDGETS ALREADY ADDED TO STAT BONUSES***
+
+Rally Joiner Expedition Skills (4) - Static, non-probablistic, attack/defense/health/lethality skills do not change the "Stat Bonuses" section.
+- Health increased by 25% for all troops
+- Health increased by 25% for all troops
+- Health increased by 25% for all troops
+- Health increased by 25% for all troops
+
+
+Brabo's Stat Bonuses:
+
+- Infantry Total Troops = 474,098
+Infantry Attack: +779.5%
+Infantry Defense: +690.5%
+Infantry Lethality: +989.2%
+Infantry Health: +824.7%
+- Lancer Total Troops = 232,514
+Lancer Attack: +699.1%
+Lancer Defense: +615.0%
+Lancer Lethality: +852.3%
+Lancer Health: +712.8%
+- Marksman Total Troops = 309,520
+Marksman Attack: +749.7%
+Marksman Defense: +661.5%
+Marksman Lethality: +907.6%
+Marksman Health: +752.1%
+
+Expedition Skills (three heroes; each has expedition skills)
+- Jeroninmo:
+"Battle Manifesto" - Increased damage dealt by 25%
+"Sword Mentor" - Attack increased by 25% for all troops
+"Expert Swordsmanship" - Troops attack have a 20% chance of stunning the target for 1 turn
+- Philly:
+"Vigor Tactics" - All troops have 15% increased attack and 10% increase in Defense
+"Dosage Boost" - All troops attack have a 25% chance of dealing 200% damage
+"Numbing Spores" - All troops attack have a 20% chance of stunning a target for 1 turn
+- Alonso:
+"Onslaught" - All troops attack have a 20% chance of stunning a target for 1 turn
+"Iron Strength" - All troops attack have a 20% chance of reducing damage dealt by 50% for all enemy troops for 2 turns
+"Poison Harpoon" - All troops attack have a 50% chance of dealing 50% more damage
+
+
+***WIDGETS ALREADY ADDED TO STAT BONUSES***
+
+Rally Joiner Skills (4):
+- Health increased by 25% for all troops
+- Health increased by 25% for all troops
+- Health increased by 25% for all troops
+- Health increased by 25% for all troops
+
+
+
+
+##### FORMULAS ON THIS PAGE WERE INITIAL NOTES --- SOME ARE NOT UPDATED
+
+Damage Dealt = DD
+
+
+
+Effective Attack (EA) = Base attack x (1+ Attack Bonus)
+Number of Troops = N
+Lethality (L) = Lethality/100
+Special Bonuses (SB) = Conditional multipliers based on troop interactions (i.e., 10% when Infantry attack Lancers)
+Expedition Skill Multipliers (ESM) = Aggregated from expedition skills (both flat & probablisitic)
+Enemy Defense (ED) = 1/(1+ED/100)
+
+
+
+Damage Dealt = (Effective Attack x {Number of Troops} * L/100 * SB * ESMs) * (1/(1+ED/100) * SB????
+
+1. Effective Attack: A = BA * (1+AB)
+2. Numbjer of Troops: N
+3. Lethality (L) = Lethality/100
+4. Special Bonuses = SB (Conditional multipliers based on troop interactions (i.e., 10% when infantry attacks lancers)
+5. Expedition Skill Multipliers (ESM): Aggregated from expedition skills (flat and probabilistic)
+6. Enemy Defense (ED) = 1/(1+ED/100)
+7. Stun Probabliity = SP
+
+
+
+Person A: Dave (Defense)
+Person B: Brabo (Offense)
+
+Troop stats for Dave and Brabo:
+
+Infantry - Attack: 10; Defense: 13; Lethality: 10; Health: 15
+
+Troop specific skills (static, always active)
+- "Master Brawler": Increased attack damage to Lancers by 10%
+- "Bands of Steel": Increases Defense against Lancers by 10%
+Troop specific RNG skill:
+- N/A
+
+Lancer - Attack: 13; Defense: 11; Lethality: 14; Health: 11
+Troop specific skills (static, always active):
+- "Charge": Increased Attack Damage to Marksman by 10%
+Troop specific RNG skill:
+- "Ambusher": Attacks have a 20% chance to strike Marksman behind Infantry
+
+Marksman:
+Attack: 14; Defense: 10; Lethality: 15; Health: 10
+Troop specific skill (static, always active):
+- "Ranged Strike": Increased attack damage to infantry by 10%
+Troop specific RNG skill:
+- "Volley": Attacks have a 10% chance to strike twice
+
+
+Dave Troops - Total: 699,807
+
+Dave's Stat Bonuses:
+
+- Infantry Total Troops = 331,624
+Infantry Attack: +904.6%
+Infantry Defense: +690.5%
+Infantry Lethality: +1065.1%
+Infantry Health: +1181.8%
+
+- Lancer Total Troops = 317,817
+Lancer Attack: +830.8%
+Lancer Defense: +643.9%
+Lancer Lethality: +849.6%
+Lancer Health: +943.1%
+
+- Marksman Total Troops = 50,366
+Marksman Attack: +826.5%
+Marksman Defense: +638.5%
+Marksman Lethality: +847.8%
+Marksman Health: +956.6%
+
+Expedition Skills (three heroes; each has expedition skills) - Static, non-probablistic, attack/defense/health/lethality expedition skills are already put into the stat bonuses.
+
+- Flint:
+"Pyromaniac" - All troops attack have a 20% chance of setting the target on fire, dealing 40% damage per turn for 3 turns
+"Burning Resolve" - Attack increased by 25% for all troops
+"Immolation" - All troops attack have a 50% chance of increasing enemy troops damage taken by 50%
+
+- Philly:
+"Vigor Tactics" - All troops have 15% increased attack and 10% increase in Defense
+"Dosage Boost" - All troops attack have a 25% chance of dealing 200% damage
+"Numbing Spores" - All troops attack have a 20% chance of stunning a target for 1 turn
+
+- Zinman:
+"Implacable" - All troops health & defense incrased by 10%
+"Positional Battler" - Damage dealt increased by 25% for all troops
+
+Rally Joiner Expedition Skills (4) - Static, non-probablistic, attack/defense/health/lethality skills do not change the "Stat Bonuses" section.
+- Health increased by 25% for all troops
+- Health increased by 25% for all troops
+- Health increased by 25% for all troops
+- Health increased by 25% for all troops
+
+
+Brabo's Stat Bonuses:
+
+- Infantry Total Troops = 474,098
+Infantry Attack: +779.5%
+Infantry Defense: +690.5%
+Infantry Lethality: +989.2%
+Infantry Health: +824.7%
+- Lancer Total Troops = 232,514
+Lancer Attack: +699.1%
+Lancer Defense: +615.0%
+Lancer Lethality: +852.3%
+Lancer Health: +712.8%
+- Marksman Total Troops = 309,520
+Marksman Attack: +749.7%
+Marksman Defense: +661.5%
+Marksman Lethality: +907.6%
+Marksman Health: +752.1%
+
+Expedition Skills (three heroes; each has expedition skills) - Static, non-probabilistic skills (i.e., attack increased by 25% for all troops) are already factored into the stat bonuses!
+- Jeroninmo:
+"Battle Manifesto" - Increased damage dealt by 25%
+"Sword Mentor" - Attack increased by 25% for all troops
+"Expert Swordsmanship" - Troops attack have a 20% chance of stunning the target for 1 turn
+- Philly:
+"Vigor Tactics" - All troops have 15% increased attack and 10% increase in Defense
+"Dosage Boost" - All troops attack have a 25% chance of dealing 200% damage
+"Numbing Spores" - All troops attack have a 20% chance of stunning a target for 1 turn
+- Alonso:
+"Onslaught" - All troops attack have a 20% chance of stunning a target for 1 turn
+"Iron Strength" - All troops attack have a 20% chance of reducing damage dealt by 50% for all enemy troops for 2 turns
+"Poison Harpoon" - All troops attack have a 50% chance of dealing 50% more damage
+
+Rally Joiner Skills (4):
+- Health increased by 25% for all troops
+- Health increased by 25% for all troops
+- Health increased by 25% for all troops
+- Health increased by 25% for all troops
+
+results  of abttle
+
+Dave:
+- Infantry:
+Kills: 24,185
+Losses: 0
+Injured: -115,803
+Lightly Injured: -197,906
+Survivors: 0
+
+- Lancer:
+Kills: 325,226
+Losses: 0
+Injured: -52,157
+Lightly Injured: -104,161
+Survivors: 168,798
+
+- Marksman:
+Kills: 6247
+Losses: 0
+Injured: -17,630
+Lightly injured: -32,736
+Survivors: 0
+
+Expedition Skills - refer to definitions above:
+
+Pyromaniac:; Trigger 5 times
+Burning Resolve: Trigger 1
+Immolation: Trigger 50 times
+Vigor Tactics: Triggered 1 time
+Dosage Boost: Triggered 24 times; kills 65,927
+Numbing Spores: Triggered 11 times
+Implacable: Triggered 1 time
+Positional Battler: Triggered 1 time
+
+Troop specific RNG skills:
+Ambusher: Triggered 19 times
+Volley: triggered 7 times
+
+--
+
+Brabo:
+- Infantry:
+Kills: 21808
+Losses: 0
+Injured: -159397
+Lightly Injured: -308160
+Survivors: 0
+
+- Lancer:
+Kills: 123,807
+Losses: 0
+Injured: -81384
+Lightly Injured: -151130
+Survivors: 0
+
+- Marksman:
+Kills: 40335
+Losses: 0
+Injured: -108336
+Lightly injured: -201184
+Survivors: 0
+
+Expedition Skills- 
+
+Battle Manifesto: Triggered 1 time
+Sword Mentor: Triggered 1 time
+Expert Swordsmanship: Triggered 8 times
+
+Vigor Tactics: Triggered 1 time
+Dosage Boost: Triggered 37 times; kills 32,587
+Numbing Spores: Triggered 11 times
+
+Onslaught: Triggered 6 times
+Iron Strength: Triggered 25 times
+Poison Harpoon: Triggered 63 times; kills 30,825
+
+Troop specific RNG skills:
+Ambusher: Triggered 14 times
+Volley: triggered 4 times
+
+
+TOTAL RESULTS:
+
+Dave:
+Starting Troops: 699,807
+Losses: 0
+Injured: -185,860
+Ligthly injured: -345,139
+Survivors: 168,808
+
+Brabo:
+Starting troops: 1,016,132
+Losses: 0
+Injured: 355,658
+Lightly injured: 660,474
+Survivors: 0
+
+Winner: DAVE
+
+
+
+
+
+Damage Dealt = (EA*N*L*SB*ESM) * (DM) + BD + DoT
+
+BA = Base Attack
+IBA = Infantry Base Attack
+LBA = Lancer Base Attack
+MBA = Marksman Base Attack
+
+BD = Base Defense
+IBD = Infantry BD
+LBD = Lancer BD
+MBD = Marksman BD
+
+AB = Attack Bonus % / 100
+IAB = Infantry AB
+LAB = Lancer AB
+MAB = Marksman AB
+
+LB = Lethality Bonus % / 100
+ILB = Infantry LB
+LLB = Lancer LB
+MLB = Marksman LB
+
+DB = Defense Bonus % / 100
+IDB = Infantry DB
+LDB = Lancer DB
+MDB = Marksman DB
+
+
+EA = Effective Attack (BA x (1 + Attack Bonus)
+IEA = Infantry EA
+LEA = Lancer EA
+MEA = Marksman EA
+
+N = Number unis per troop type
+IN = Infantry # troops
+LN = Lancer # troops
+MN = Marksman # troops
+
+L = Lethality
+- Lethalitty = (Lethality/100)
+
+H = Health
+
+SB = Special Bonuses 
+- Conditional multipliers based on troop type interactions
+- i.e., Infantry attacking Lancers get + 10% damage. SB = 1.10
+
+ESM = Expedition Skill Multipliers
+- Aggregated multipliers from expedition skills
+- Includes flat and RNG damage increases
+- i.e., +25% damage dealt --> ESM = 1.25
+
+DM = Defense mitigation
+- 1/1+ED/100
+- This scales damage based on enemy defense
+
+BD = Burst Damage
+- Additional damage from skills like "Dosage Boost" (25% chance to deal 200% damage)
+- Calculated as: BD = Base Damage x Probability x Multiplier
+
+DoT = Damage Over Time Damage
+- Ongoing damage from skills like "Pyromaniac" (All troops attack have a 20% chance of setting the target on fire, dealing 40% damage per turn for 3 turns)
+- Calculated per turn and accumulated over the duration
+
+Stun Probability/Mechanics = SP 
+- Modeled as turn skipping for the affected troops. This reduces the opponents damage output in subsequent turns.
+- Effective Damage = Damage Dealt x (1 - SP)
+
+Overkill and Cumulative Damage
+- Mechanism to carry over excess damage once a troop's health is depleted, allowing it to impact subsequent troops
+- Excess Damage = ED
+
+ED = Damage Dealt - (N + H)
+- Additional Troop Losses = ED/Health
+
+
+Daves Troops EA: 351.166
+
+Infantry: 100.46
+IEA = BA x (1 + IAB) = BA x ILB
+100.46 = 10 x (1 + 9.046) = 10 x 10.046
+
+Lancer: 120.996
+13 x (1 +8.308) = 13 x 9.308 = 120.996
+
+Marksman: 129.71
+14 x (1+8.265) = 14 x 9.265 = 129.71
+
+Total Effective Attack = Sum of all troop types EA
+
+EA = 351.166
+
+Lethality Impact:
+- Average Lethality (per troop type):
+WAL = Weighted Average Lethality
+WAL = (IBA x IN) + (LBA x LN) + (MBA x MN) / Total Troop Count
+- For this report..
+(10 x 331,624) + (14 x 317,817) + (15 x 50,366) / 699,807
+= approx 12.18
+
+
+--- Damage Mitigation
+Damage Mitigation Factor = DMF
+Brabo DB's = IDB 690.5%, LDB 615.0%, MDB 661.5%
+Average DB for Brabo = (690.5+615+661)/3 = 655.67
+ADB = 655.67
+
+DMF = 1/(1+(ADB/100))
+Brabo - 
+DMF = 1 / (1 + (655.67/100))
+DMF = approx 0.133
+
+--- Final Damage Calculation:
+
+Damage Dealt = EA x WAL x SB x ESM x DMF
+
+
+FINAL CALCULATION APPLIED TO DAVE
+
+Infantry: 
+IN: 331,624
+Lethality 10 (10%)
+
+Lancer:
+LN: 317,817
+Lethality: 14%
+
+Marksman:
+MN: 50,366
+Marksman Lethality: 15%
+
+Total troops = 699,807 (47-45-7)
+Infantry: 47.39%
+Lancer: 45.41%
+Marksman: 7.20%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
