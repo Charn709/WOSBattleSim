@@ -1,0 +1,605 @@
+t1 notes
+
+
+***GENERAL TAKEAWAYS SO FAR*****
+Without factoring skills/bonuses etc, infantry must always match or exceed your opponent
+
+
+
+T1 Stats
+
+Infantry:
+Attack: 1
+Defense: 4
+Lethality: 1
+Health: 6
+
+Lancer:
+Attack: 4
+Defense: 2
+Lethality: 5
+Health: 2
+
+Marksman:
+Attack: 5
+Defense: 1
+Lethality: 5
+Health: 1
+
+
+
+--
+Team 1: Offense
+Team 2: Defense
+
+Team 1: 125 Infantry, 100 Lancer
+Team 2: 100 Infantry, 125 Lancer
+
+
+Team 1: 57 injured, 104 light injured, 64 survivors
+Team 2: 79 injured, 146 light injured, 0 survivors
+
+---- Kills:
+- Team 1: 
+Infantry; 7
+Lancer: 72
+- Team 2:
+Infantry: 9
+Lancer: 48
+
+----- Injured troops:
+- Team 1:
+Infantry: 44
+Lancer: 13
+Infantry lightly: 65
+Lancer lightly: 23
+
+- Team 2:
+Infantry: 35
+Lancer: 44
+Infantry lightly: 65
+Lancer lightly: 81
+
+
+---------Survivors:
+Team 1:
+Infantry: 0
+Lancer: 64
+
+Team 2:
+Infantry: 0
+Lancer: 0
+-----------------------------
+
+Team 1: Offense
+Team 2: Defense
+
+-------- test 1
+Team 1: 125-100-100
+Team 2: 100-100-125
+---- Kills:
+Team 1:
+Infantry: 5
+Lancer:40
+Marksman:69
+
+Team 2:
+Infantry:2
+Lancer:20
+Marksman:56
+
+----- Injured troops:
+Team 1:
+Infantry: 44
+Infantry Lightly:81
+Lancer:34
+Lancer lightly:61
+Marksman:0
+Marksman lightly:0
+
+Team 2:
+Infantry:35
+Infantry Lightly:65
+Lancer:35
+Lancer lightly:65
+Marksman:44
+Marksman lightly:81
+
+---------Survivors:
+
+Team 1:
+Infantry:0
+Lancer:5
+Marksman:100
+
+Team 2:
+Infantry:0
+Lancer:0
+Marksman:0
+
+--------------------------------------------------
+Test 1 (flipped) - exact same results
+Team 1: Defense (125-100-100)
+Team 2: Offense (100-100-125)
+
+---- Kills:
+Team 1:
+Infantry: 5
+Lancer:40
+Marksman:69
+
+Team 2:
+Infantry:2
+Lancer:20
+Marksman:56
+
+----- Injured troops:
+Team 1:
+Infantry: 44
+Infantry Lightly:81
+Lancer:34
+Lancer lightly:61
+Marksman:0
+Marksman lightly:0
+
+Team 2:
+Infantry:35
+Infantry Lightly:65
+Lancer:35
+Lancer lightly:65
+Marksman:44
+Marksman lightly:81
+
+---------Survivors:
+
+Team 1:
+Infantry:0
+Lancer:5
+Marksman:100
+
+Team 2:
+Infantry:0
+Lancer:0
+Marksman:0
+----------------------------------------------------
+
+
+test 2
+Team 1: 100-125-100
+Team 2: 100-100-125
+
+---- Kills:
+Team 1:
+Infantry: 6
+Lancer: 30
+Marksman: 78
+
+Team 2:
+Infantry:3
+Lancer:24
+Marksman:77
+
+----- Injured troops:
+Team 1:
+Infantry: 35
+Infantry Lightly:65
+Lancer:44
+Lancer lightly:81
+Marksman:25
+Marksman lightly:46
+
+Team 2:
+Infantry:35
+Infantry Lightly:65
+Lancer:35
+Lancer lightly:65
+Marksman:44
+Marksman lightly:81
+
+---------Survivors:
+
+Team 1:
+Infantry:0
+Lancer:0
+Marksman:29
+
+Team 2:
+Infantry:0
+Lancer:0
+Marksman:0
+
+
+
+2. Marksmen Survivability with Different Infantry Ratios (Opposites) ---------------------------------------------------
+
+50% Infantry, 25% Lancers, 25% Marksmen (Opponent: 25% Infantry, 50% Lancers, 25% Marksmen)
+team 1
+Infantry: 162
+Lancer: 81
+Marksman: 81
+
+team 2
+Infantry: 81
+Opponent Lancers: 162
+Opponent Marksmen: 81
+
+---- Kills:
+Team 1:
+Infantry: 13
+Lancer: 45
+Marksman: 57
+
+Team 2:
+Infantry:2
+Lancer:20
+Marksman:31
+
+----- Injured troops:
+Team 1:
+Infantry: 53
+Infantry Lightly: 97
+Lancer: 0
+Lancer lightly: 0
+Marksman: 0
+Marksman lightly: 0
+
+Team 2:
+Infantry:29
+Infantry Lightly:52
+Lancer:57
+Lancer lightly:105
+Marksman:29
+Marksman lightly:52
+
+---------Survivors:
+
+Team 1:
+Infantry:12
+Lancer: 81
+Marksman: 81
+
+Team 2:
+Infantry:0
+Lancer:0
+Marksman:0
+
+
+
+40% Infantry, 20% Lancers, 40% Marksmen (Opponent: 40% Infantry, 40% Lancers, 20% Marksmen)
+Infantry: 130
+Lancer: 65
+Marksman: 130
+
+
+Opponent Infantry: 130
+Opponent Lancers: 130
+Opponent Marksmen: 65
+
+---- Kills:
+Team 1:
+Infantry: 8
+Lancer: 22
+Marksman: 85
+
+Team 2:
+Infantry: 5
+Lancer: 35
+Marksman:61
+
+----- Injured troops:
+Team 1:
+Infantry: 46
+Infantry Lightly: 84
+Lancer: 23
+Lancer lightly: 42
+Marksman: 32
+Marksman lightly: 57
+
+Team 2:
+Infantry:46
+Infantry Lightly:84
+Lancer:46
+Lancer lightly:84
+Marksman:23
+Marksman lightly:42
+
+---------Survivors:
+
+Team 1:
+Infantry:0
+Lancer: 0
+Marksman: 0
+
+Team 2:
+Infantry:0
+Lancer:0
+Marksman:41
+
+------------ Balanced with heavy marksman impact
+
+33-27-40 vs 60-20-20
+
+---- Kills:
+Team 1:
+Infantry: 3
+Lancer: 20
+Marksman: 42
+
+Team 2:
+Infantry: 15
+Lancer: 44
+Marksman:56
+
+----- Injured troops:
+Team 1:
+Infantry: 38
+Infantry Lightly: 69
+Lancer: 31
+Lancer lightly: 57
+Marksman: 46
+Marksman lightly: 84
+
+Team 2:
+Infantry:65
+Infantry Lightly:120
+Lancer:0
+Lancer lightly:0
+Marksman:0
+Marksman lightly:0
+
+---------Survivors:
+
+Team 1:
+Infantry:0
+Lancer: 0
+Marksman: 0
+
+Team 2:
+Infantry:10
+Lancer: 65
+Marksman: 65
+
+****************Marksman-Dominant Composition Struggles Without Strong Infantry Support***************
+
+
+50-25-25 vs 60-20-20
+
+---- Kills:
+Team 1: 60-20-20
+Infantry: 8
+Lancer: 45
+Marksman: 62
+
+Team 2: 50-25-25
+Infantry:8
+Lancer: 27
+Marksman:51
+
+----- Injured troops:
+Team 1:
+Infantry: 69
+Infantry Lightly: 126
+Lancer: 17
+Lancer lightly: 31
+Marksman: 0
+Marksman lightly: 0
+
+Team 2:
+Infantry: 57
+Infantry Lightly:105
+Lancer: 29
+Lancer lightly:52
+Marksman:29
+Marksman lightly:52
+
+---------Survivors:
+
+Team 1:
+Infantry:0
+Lancer: 17
+Marksman: 65
+
+Team 2:
+Infantry:0
+Lancer: 0
+Marksman:0
+
+
+
+-------
+
+for later:
+50-20-30 vs 60-20-20
+50-20-30 vs 50-25-25
+
+
+60-20-20 vs 60-10-30
+
+
+Team 1: 60-10-30
+Team 2: 60-20-20
+
+---- Kills:
+Team 1: 60-10-30
+Infantry: 10
+Lancer: 20
+Marksman: 85
+
+Team 2: 60-20-20
+Infantry:9
+Lancer: 32
+Marksman:73
+
+----- Injured troops:
+Team 1:
+Infantry: 69
+Infantry Lightly: 126
+Lancer: 12
+Lancer lightly: 21
+Marksman: 33
+Marksman lightly: 60
+
+Team 2:
+Infantry: 69
+Infantry Lightly:126
+Lancer: 23
+Lancer lightly:42
+Marksman:23
+Marksman lightly:42
+
+---------Survivors:
+
+Team 1:
+Infantry:0
+Lancer: 0
+Marksman: 4
+
+Team 2:
+Infantry:0
+Lancer: 0
+Marksman:0
+
+
+
+60-25-15 vs 60-10-30
+
+---- Kills:
+Team 1: 60-10-30
+Infantry: 4
+Lancer: 7
+Marksman: 25
+
+Team 2: 60-25-15
+Infantry: 3
+Lancer: 12
+Marksman: 19
+
+----- Injured troops:
+Team 1:
+Infantry: 21
+Infantry Lightly: 39
+Lancer: 4
+Lancer lightly: 6
+Marksman: 9
+Marksman lightly: 14
+
+Team 2:
+Infantry: 21
+Infantry Lightly:39
+Lancer: 9
+Lancer lightly:16
+Marksman:6
+Marksman lightly:9
+
+---------Survivors:
+
+Team 1:
+Infantry:0
+Lancer: 0
+Marksman: 7
+
+Team 2:
+Infantry:0
+Lancer: 0
+Marksman:0
+
+
+
+40-10-50 vs 60-20-20
+
+
+---- Kills:
+Team 1: 40-10-50
+Infantry: 2
+Lancer: 3
+Marksman: 16
+
+Team 2: 60-20-20
+Infantry: 4
+Lancer: 14
+Marksman: 18
+
+----- Injured troops:
+Team 1:
+Infantry: 14
+Infantry Lightly: 26
+Lancer:4
+Lancer lightly: 6
+Marksman: 18
+Marksman lightly: 32
+
+Team 2:
+Infantry: 21
+Infantry Lightly:57
+Lancer: 0
+Lancer lightly:0
+Marksman:0
+Marksman lightly:0
+
+---------Survivors:
+
+Team 1:
+Infantry:0
+Lancer: 0
+Marksman: 0
+
+Team 2:
+Infantry:0
+Lancer: 20
+Marksman:20
+
+
+50-10-40 vs 60-20-20
+
+
+---- Kills:
+Team 1: 50-10-40
+Infantry: 2
+Lancer: 5
+Marksman: 18
+
+Team 2: 60-20-20
+Infantry: 2
+Lancer: 15
+Marksman: 19
+
+----- Injured troops:
+Team 1:
+Infantry: 18
+Infantry Lightly: 32
+Lancer:4
+Lancer lightly: 6
+Marksman: 14
+Marksman lightly: 26
+
+Team 2:
+Infantry: 21
+Infantry Lightly:39
+Lancer: 5
+Lancer lightly:7
+Marksman:0
+Marksman lightly:0
+
+---------Survivors:
+
+Team 1:
+Infantry:0
+Lancer: 0
+Marksman: 0
+
+Team 2:
+Infantry:0
+Lancer: 8
+Marksman:20
+
+
+
+
+
+
+
+
+
+
+
+
