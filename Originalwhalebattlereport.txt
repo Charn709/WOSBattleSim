@@ -1,0 +1,209 @@
+Person A: Dave (Defense)
+Person B: Brabo (Offense)
+
+Troop stats for Dave and Brabo:
+
+Infantry - Attack: 10; Defense: 13; Lethality: 10; Health: 15
+
+Troop specific skills (static, always active)
+- "Master Brawler": Increased attack damage to Lancers by 10%
+- "Bands of Steel": Increases Defense against Lancers by 10%
+Troop specific RNG skill:
+- N/A
+
+Lancer - Attack: 13; Defense: 11; Lethality: 14; Health: 11
+Troop specific skills (static, always active):
+- "Charge": Increased Attack Damage to Marksman by 10%
+Troop specific RNG skill:
+- "Ambusher": Attacks have a 20% chance to strike Marksman behind Infantry
+
+Marksman:
+Attack: 14; Defense: 10; Lethality: 15; Health: 10
+Troop specific skill (static, always active):
+- "Ranged Strike": Increased attack damage to infantry by 10%
+Troop specific RNG skill:
+- "Volley": Attacks have a 10% chance to strike twice
+
+
+Dave Troops - Total: 699,807
+
+Dave's Stat Bonuses:
+
+- Infantry Total Troops = 331,624
+Infantry Attack: +904.6%
+Infantry Defense: +690.5%
+Infantry Lethality: +1065.1%
+Infantry Health: +1181.8%
+
+- Lancer Total Troops = 317,817
+Lancer Attack: +830.8%
+Lancer Defense: +643.9%
+Lancer Lethality: +849.6%
+Lancer Health: +943.1%
+
+- Marksman Total Troops = 50,366
+Marksman Attack: +826.5%
+Marksman Defense: +638.5%
+Marksman Lethality: +847.8%
+Marksman Health: +956.6%
+
+Expedition Skills (three heroes; each has expedition skills) - Static, non-probablistic, attack/defense/health/lethality expedition skills are already put into the stat bonuses.
+
+- Flint:
+"Pyromaniac" - All troops attack have a 20% chance of setting the target on fire, dealing 40% damage per turn for 3 turns
+"Burning Resolve" - Attack increased by 25% for all troops
+"Immolation" - All troops attack have a 50% chance of increasing enemy troops damage taken by 50%
+
+- Philly:
+"Vigor Tactics" - All troops have 15% increased attack and 10% increase in Defense
+"Dosage Boost" - All troops attack have a 25% chance of dealing 200% damage
+"Numbing Spores" - All troops attack have a 20% chance of stunning a target for 1 turn
+
+- Zinman:
+"Implacable" - All troops health & defense incrased by 10%
+"Positional Battler" - Damage dealt increased by 25% for all troops
+
+Rally Joiner Expedition Skills (4) - Static, non-probablistic, attack/defense/health/lethality skills do not change the "Stat Bonuses" section.
+- Health increased by 25% for all troops
+- Health increased by 25% for all troops
+- Health increased by 25% for all troops
+- Health increased by 25% for all troops
+
+
+Brabo's Stat Bonuses:
+
+- Infantry Total Troops = 474,098
+Infantry Attack: +779.5%
+Infantry Defense: +690.5%
+Infantry Lethality: +989.2%
+Infantry Health: +824.7%
+- Lancer Total Troops = 232,514
+Lancer Attack: +699.1%
+Lancer Defense: +615.0%
+Lancer Lethality: +852.3%
+Lancer Health: +712.8%
+- Marksman Total Troops = 309,520
+Marksman Attack: +749.7%
+Marksman Defense: +661.5%
+Marksman Lethality: +907.6%
+Marksman Health: +752.1%
+
+Expedition Skills (three heroes; each has expedition skills) - Static, non-probabilistic skills (i.e., attack increased by 25% for all troops) are already factored into the stat bonuses!
+- Jeroninmo:
+"Battle Manifesto" - Increased damage dealt by 25%
+"Sword Mentor" - Attack increased by 25% for all troops
+"Expert Swordsmanship" - Troops attack have a 20% chance of stunning the target for 1 turn
+- Philly:
+"Vigor Tactics" - All troops have 15% increased attack and 10% increase in Defense
+"Dosage Boost" - All troops attack have a 25% chance of dealing 200% damage
+"Numbing Spores" - All troops attack have a 20% chance of stunning a target for 1 turn
+- Alonso:
+"Onslaught" - All troops attack have a 20% chance of stunning a target for 1 turn
+"Iron Strength" - All troops attack have a 20% chance of reducing damage dealt by 50% for all enemy troops for 2 turns
+"Poison Harpoon" - All troops attack have a 50% chance of dealing 50% more damage
+
+Rally Joiner Skills (4):
+- Health increased by 25% for all troops
+- Health increased by 25% for all troops
+- Health increased by 25% for all troops
+- Health increased by 25% for all troops
+
+results  of abttle
+
+Dave:
+- Infantry:
+Kills: 24,185
+Losses: 0
+Injured: -115,803
+Lightly Injured: -197,906
+Survivors: 0
+
+- Lancer:
+Kills: 325,226
+Losses: 0
+Injured: -52,157
+Lightly Injured: -104,161
+Survivors: 168,798
+
+- Marksman:
+Kills: 6247
+Losses: 0
+Injured: -17,630
+Lightly injured: -32,736
+Survivors: 0
+
+Expedition Skills - refer to definitions above:
+
+Pyromaniac:; Trigger 5 times
+Burning Resolve: Trigger 1
+Immolation: Trigger 50 times
+Vigor Tactics: Triggered 1 time
+Dosage Boost: Triggered 24 times; kills 65,927
+Numbing Spores: Triggered 11 times
+Implacable: Triggered 1 time
+Positional Battler: Triggered 1 time
+
+Troop specific RNG skills:
+Ambusher: Triggered 19 times
+Volley: triggered 7 times
+
+--
+
+Brabo:
+- Infantry:
+Kills: 21808
+Losses: 0
+Injured: -159397
+Lightly Injured: -308160
+Survivors: 0
+
+- Lancer:
+Kills: 123,807
+Losses: 0
+Injured: -81384
+Lightly Injured: -151130
+Survivors: 0
+
+- Marksman:
+Kills: 40335
+Losses: 0
+Injured: -108336
+Lightly injured: -201184
+Survivors: 0
+
+Expedition Skills- 
+
+Battle Manifesto: Triggered 1 time
+Sword Mentor: Triggered 1 time
+Expert Swordsmanship: Triggered 8 times
+
+Vigor Tactics: Triggered 1 time
+Dosage Boost: Triggered 37 times; kills 32,587
+Numbing Spores: Triggered 11 times
+
+Onslaught: Triggered 6 times
+Iron Strength: Triggered 25 times
+Poison Harpoon: Triggered 63 times; kills 30,825
+
+Troop specific RNG skills:
+Ambusher: Triggered 14 times
+Volley: triggered 4 times
+
+
+TOTAL RESULTS:
+
+Dave:
+Starting Troops: 699,807
+Losses: 0
+Injured: -185,860
+Ligthly injured: -345,139
+Survivors: 168,808
+
+Brabo:
+Starting troops: 1,016,132
+Losses: 0
+Injured: 355,658
+Lightly injured: 660,474
+Survivors: 0
+
+Winner: DAVE
