@@ -1,0 +1,261 @@
+##### FORMULAS ON THIS PAGE WERE INITIAL NOTES --- SOME ARE NOT UPDATED
+
+
+
+1. Battle Overview
+
+Participants - 
+Person A: Dave (Defense)
+Person B: Brabo (Offense)
+----------------------------------------------------------
+
+--- Troop Types/Base Stats ---
+Attack = A; Defense = D; Lethality = L; Health = H
+
+- Infanry:
+  - A: 10
+  - D: 13
+  - L: 10
+  - H: 15
+    - Special Skills:
+      - Master Brawler: +10% Attack Damage to Lancers
+      - Bands of Steel: +10% Defense against Lancers
+
+- Lancer:
+  - A: 13
+  - D: 11
+  - L: 14
+  - H: 11
+      - Special Skills:
+        - Charge: +10% Attack Damage to Marksman
+        - Ambusher: 20% chance to attack Marksman directly
+
+- Marksman:
+  - A: 14
+  - D: 10
+  - L: 15
+  - H: 10
+      - Special Skills:
+        - Ranged Strike: +10% Attack Damage to Infantry
+        - Volley: 10% chance to strike twice
+
+def
+infantry 13 + 358
+lancer 11 + 340
+marksman 10 + 302
+
+infantry 16.5
+lancer 14.4
+marksman 13
+
+
+253
+206
+253
+
+
+
+
+--- Troop Counts ---
+
+Person A: Dave -
+Total Troops: 699,807
+- Infantry: 331,624
+- Lancer: 317,817
+- Marksman: 50,366
+
+Person B: Brabo
+Total Troops: 1,016,132
+- Infantry: 474,098
+- Lancer: 232,514
+- Marksman: 309,520
+
+--- Troop Ratios ---
+Dave
+Infantry: 47.39%
+Lancer: 45.41%
+Marksman: 7.20%
+
+Brabo
+Infantry: 46.66%
+Lancer: 22.88%
+Marksman: 30.46%
+
+--- Expedition Skills ---
+
+Dave:
+
+- Flint:
+    - Pyromaniac (20% chance to deal 40% damage per turn for 3 turns)
+    - Burning Resolve (+25% Attack for all troops) -- static, already applied to stat bonuses
+    - Immolation (50% chance to increase enemy troops' damage taken by 50%)
+- Philly
+    - Vigor Tactics (+15% Attack, +10% Defense for all troops)
+    - Dosage Boost (25% chance to deal 200% damage)
+    - Numbing Spores (20% chance to stun target for 1 turn)
+- Zinman
+    - Implacable (+10% Health & +10% Defense for all troops)
+    - Positional Battler (+25% damage dealt for all troops)
+
+Brabo:
+
+- Jeronimo:
+    - Battle Manifesto: (+25% Damage dealt)
+    - Sword Mentor: (25% Attack for all troops) -- static, already added to stat bonuses
+    - Expert Swordsmanship (20% chance to stun target for 1 turn)
+- Philly
+    - Vigor Tactics (+15% Attack, +10% Defense for all troops)
+    - Dosage Boost (all troops 25% chance to deal 200% damage)
+    - Numbing Spores (20% chance to stun target for 1 turn)
+- Alonso:
+    - Onslaught: 20% chance to stun target for 1 turn
+    - Iron Strength: 20% chance to reduce damage dealt by 50% for enemy troops for 2 turns
+    - Poison Harpoon: 50% chance to deal 50% more damage
+
+
+--- Rally Joiner Skills (4) ---
+
+Dave:
+  - Patrick (4):
+    - Health increasesd by 25% for all troops (each skill stacks)
+
+Brabo:
+  - Patrick (4):
+    - Health increasesd by 25% for all troops (each skill stacks)
+
+----------------------------------------------------------------------
+
+1 - Components
+
+Attack (A): Damage output
+Defense (D): Mitigates incoming damage
+Lethality (L): Percentahe of attack that translates into actual damage
+Health (H): Amount of damage a troop can sustain before being killed.
+
+1.2 Base Stat Bonuses
+
+Stat Bonuses - % increase applied to each base stat
+
+Effective Stats (ES) - 
+  - ES = Base Stat(1 + (Stat Bonus %/100))
+
+Boosts
+
+1.3 - Expedition Skills
+
+Static Skills: Always active & directly modify stats or add passive effects
+RNG Skills: Have a probabiility to activate during attacks. (Stuns, additional damage, damage reduction)
+  - i.e., Poison Harpoon
+
+Skill Categories
+
+- Damage Multipliers: Increase attack damage (i.e., Battle Manifesto)
+- Defense Boosts: Enhance troop defense (i.e., Vigor Tactics)
+- DoT (Damage over time): Ongoing damage effects (i.e., Iron Strength)
+- Burst Damage (Sudden spikes in damage, i.e., Poison Harpoon)
+- Stuns: Temporarily disable enemy from attacking for x amount of turns (i.e., Onslaught, Expert Swordsmanship)
+- Damage Taken Reduction: Decrease incoming damage
+
+----------------------------------------------------------------------
+
+3 - Damage Calculation Formulas
+
+Before calculating dmg, determine each troops ES by applying their stat bonuses
+
+--- Definitions ---
+
+Effective Stats = ES
+
+Effective Attack = EA
+Defense = ED
+Lethality = EL
+Health = EH
+
+BA = Base Attack
+BD = Defense
+BL = Lethality
+BH = Health
+
+AB = Attack Bonus
+DB = Defense Bonus
+LB = Lethality Bonus
+HB = Health Bonus
+
+--------------------
+
+3.1 - Effective Stats
+
+EA = BA(1 + (AB % / 100))
+ED = BD(1 + (DB % / 100))
+EL = BL(1 + (LB % / 100))
+EH = BH(1 + (HB % / 100))
+
+E.g., Dave's Infantry have a base attack (BA) of 10 and Attack Bonus (AB) of 904.6 (+%)
+    - EA = 10(1 + (904.6/100))
+      - EA = 10(1+ 9.046)
+        - EA = 10(10.046)
+          - EA = 100.46
+
+
+3.2 - Special Bonuses
+Conditional multipliers based on troop type interactions
+
+Special Bonuses:
+- 1.10 if Infantry attacks Lancers
+- 1.10 if Lancer attacks Marksman
+- 1.10 if Marksman attacks Infantry
+- 1.00 otherwise
+
+Further explained:
+- Base Bonus is 1.0 (none)
+  - Infantry deal + 10% damage to Lancers
+  - Lancers deal + 10 % damage to Marksmen
+  - Marksmen deal + 10 % damage to Infantry
+
+
+3.3 - Expedition Skill Modifiers
+These are multiplicative factors derived from expedition skills (static and probabilistic)
+
+Calculating Expected Mulitpliers (EM) for Probabilistic Skills:
+
+EM = sum of (probability x multiplier)
+
+E.g., Poison Harpoon (50% chance to deal 50% increased damage) & Dosage Boost (25% chance to deal + 200% damage)
+EM = (0.5 x 1.5) + (0.25 x 2)
+EM = 1.75
+
+Aggregated Multipliers:
+
+Multiply all expected multipliers to get the Total Expedition Skill Modifier (ESM)
+
+ESM = Coprod of all expected multipliers
+
+3.4 - Damage Mitigation
+Incoming damage is reduced based on enemy's EFFECTIVE defense
+
+Dave's example DMF:
+Step 1: Find BD for each troop type.
+IBD = 13
+LBD = 11
+MBD = 10
+
+Step 2: Find 
+
+Step 2: Find ED
+
+
+Infantry: Base defense
+
+
+DMF = 1 / (1 + (WAL
+
+Mitigated Damage = Raw Damage x Damage Mitigation Factor
+
+
+
+
+
+
+
+
+
